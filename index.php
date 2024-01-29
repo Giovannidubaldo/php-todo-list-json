@@ -24,8 +24,8 @@
                     <li v-for="city, key in city">{{city.text}}</li>
                 </ul>
                 <div class="input-group">
-                    <input type="text" v-model="newCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">
-                    <button type="button" class="btn btn-sm btn-primary">Aggiungi</button>
+                    <input type="text" v-model="newCity" @keyup.enter="addNewCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">
+                    <button type="button" class="btn btn-sm btn-primary" @click="addNewCity">Aggiungi</button>
                 </div>
             </div>
         </div>
