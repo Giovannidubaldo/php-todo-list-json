@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <title>PHP ToDo List JSON</title>
+
 </head>
 <body>
     <div id="app">
@@ -21,7 +22,7 @@
             <div class="row">
                 <h1 class="text-center my-3 text-white">My Todo-List</h1>
                 <ul class="list-unstyled text-white">
-                    <li v-for="city, key in city">{{city.text}}</li>
+                    <li v-for="city, key in city" :key="key">{{city.text}}</li>
                 </ul>
                 <div class="input-group">
                     <input type="text" v-model="newCity" @keyup.enter="addNewCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">

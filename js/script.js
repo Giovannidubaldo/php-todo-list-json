@@ -12,14 +12,10 @@ createApp({
         this.getListCity();
     },
     methods: {
-        getListCity() {
-            axios.get(this.apiUrl).then((response) => {
-                this.city = response.data;
-            })
-        },
         addNewCity() {
             const data = {
-                item: this.newCity
+                text: this.newCity,
+                done: false
             }
 
             axios.post(this.apiUrl, data, {
@@ -28,6 +24,11 @@ createApp({
                 this.newCity = '';
                 this.city = response.data;
             })
-        }
+        },
+        getListCity() {
+            axios.get(this.apiUrl).then((response) => {
+                this.city = response.data;
+            })
+        },
     }
 }).mount('#app')
