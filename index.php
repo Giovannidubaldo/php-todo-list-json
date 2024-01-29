@@ -20,6 +20,9 @@
         <div class="container">
             <div class="row">
                 <h1 class="text-center my-3 text-white">My Todo-List</h1>
+                <ul>
+                    <li v-for="city, key in city">{{city.text}}</li>
+                </ul>
             </div>
         </div>
     </div>
