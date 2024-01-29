@@ -17,7 +17,11 @@
 </head>
 <body>
     <div id="app">
-        
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center my-3 text-white">My Todo-List</h1>
+            </div>
+        </div>
     </div>
 
     <script src="./js/script.js" type="text/javascript"></script>
