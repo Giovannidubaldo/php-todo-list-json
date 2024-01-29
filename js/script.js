@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             apiUrl: 'server.php',
+            newCity: '',
             city: [],
         }
     },

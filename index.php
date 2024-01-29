@@ -20,9 +20,13 @@
         <div class="container">
             <div class="row">
                 <h1 class="text-center my-3 text-white">My Todo-List</h1>
-                <ul>
+                <ul class="list-unstyled text-white">
                     <li v-for="city, key in city">{{city.text}}</li>
                 </ul>
+                <div class="input-group">
+                    <input type="text" v-model="newCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">
+                    <button type="button" class="btn btn-sm btn-primary">Aggiungi</button>
+                </div>
             </div>
         </div>
     </div>
