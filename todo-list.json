@@ -1,1 +1,30 @@
-[{"text":"Barcellona","done":false},{"text":"Copenaghen","done":false},{"text":"Dublino","done":false},{"text":"Amsterdam","done":false},{"text":"New York","done":false},{"text":"Los Angeles","done":false},{"text":"Londra","done":false}]
+[
+    {
+        "text": "Barcellona",
+        "done": false
+    },
+    {
+        "text": "Copenaghen",
+        "done": false
+    },
+    {
+        "text": "Dublino",
+        "done": false
+    },
+    {
+        "text": "Amsterdam",
+        "done": false
+    },
+    {
+        "text": "New York",
+        "done": false
+    },
+    {
+        "text": "Los Angeles",
+        "done": false
+    },
+    {
+        "text": "Londra",
+        "done": false
+    }
+]

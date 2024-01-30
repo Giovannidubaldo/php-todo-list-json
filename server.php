@@ -21,6 +21,7 @@
         file_put_contents('todo-list.json', json_encode($cityList));
     }
 
+    // Modifico il done di un elemento cliccandoci sopra
     if(isset($_POST['toggleIndex'])){
         $index = $_POST['toggleIndex'];
 
@@ -31,6 +32,14 @@
             $cityList[$index]['done'] = true;
         }
 
+        file_put_contents('todo-list.json', json_encode($cityList));
+    }
+
+    // Elimino un elemento dalla lista
+    if(isset($_POST['deleteIndex'])){
+        $deleteIndex = $_POST['deleteIndex'];
+
+        array_splice($cityList, $deleteIndex, 1);
         file_put_contents('todo-list.json', json_encode($cityList));
     }
     

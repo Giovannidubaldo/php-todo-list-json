@@ -40,6 +40,19 @@ createApp({
             })
         },
 
+        // Elimino un elemento
+        deleteCity(key) {
+            const data = {
+                deleteIndex: key
+            }
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-type': 'multipart/form-data' }
+            }).then((response) => {
+                this.city = response.data;
+            })
+        },
+
         // Restituisco l'array di oggetti
         getListCity() {
             axios.get(this.apiUrl).then((response) => {

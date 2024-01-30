@@ -25,8 +25,9 @@
                     <ul class="list-unstyled">
                         <li v-for="city, key in city" :key="key" class="d-flex justify-content-between">
                             <div @click="toggleDone(key)" :class="city.done ? 'text-decoration-line-through' : ''">{{city.text}}</div>
-                            <div>
+                            <div class="d-flex">
                                 <button @click="toggleDone(key)" class="btn btn-sm btn-primary">Visitata</button>
+                                <button @click="deleteCity(key)" class="btn btn-sm btn-danger ms-2">Cancella</button>
                             </div>
                         </li>
                     </ul>
