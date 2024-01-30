@@ -20,6 +20,19 @@
         // Salvo il nuovo contenuto file todo-lost.json
         file_put_contents('todo-list.json', json_encode($cityList));
     }
+
+    if(isset($_POST['toggleIndex'])){
+        $index = $_POST['toggleIndex'];
+
+        if($cityList[$index]['done'] == true){
+            $cityList[$index]['done'] = false;
+        }
+        else{
+            $cityList[$index]['done'] = true;
+        }
+
+        file_put_contents('todo-list.json', json_encode($cityList));
+    }
     
     header('Content-type: application/json');
     echo json_encode($cityList);

@@ -21,12 +21,19 @@
         <div class="container">
             <div class="row">
                 <h1 class="text-center my-3 text-white">My Todo-List</h1>
-                <ul class="list-unstyled text-white">
-                    <li v-for="city, key in city" :key="key">{{city.text}}</li>
-                </ul>
-                <div class="input-group">
-                    <input type="text" v-model="newCity" @keyup.enter="addNewCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">
-                    <button type="button" class="btn btn-sm btn-primary" @click="addNewCity">Aggiungi</button>
+                <div class="list-container">
+                    <ul class="list-unstyled">
+                        <li v-for="city, key in city" :key="key" class="d-flex justify-content-between">
+                            <div @click="toggleDone(key)" :class="city.done ? 'text-decoration-line-through' : ''">{{city.text}}</div>
+                            <div>
+                                <button @click="toggleDone(key)" class="btn btn-sm btn-primary">Visitata</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="input-group mt-4">
+                        <input type="text" v-model="newCity" @keyup.enter="addNewCity" class="form-control form-control-sm" placeholder="Aggiungi una nuova città da visitare">
+                        <button type="button" class="btn btn-sm btn-primary" @click="addNewCity">Aggiungi</button>
+                    </div>
                 </div>
             </div>
         </div>
